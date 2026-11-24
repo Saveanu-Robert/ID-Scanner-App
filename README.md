@@ -1,5 +1,11 @@
 # ID & Passport Scanner
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB.svg?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)
+![React 19](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)
+![Tesseract OCR](https://img.shields.io/badge/OCR-Tesseract-5A5A5A.svg)
+
 A demo application that extracts personal information from ID cards and passports using OCR and MRZ (Machine Readable Zone) parsing.
 
 Upload a photo of an identity document, click **Scan**, and the app pulls out the holder's name, date of birth, nationality, document number, expiry date, and gender.
@@ -69,6 +75,13 @@ sudo apt install tesseract-ocr
 ```
 
 ## Getting started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Saveanu-Robert/ID-Scanner-App.git
+cd ID-Scanner-App
+```
 
 ### Backend
 
@@ -182,3 +195,7 @@ Health check. Returns `{"status": "healthy", "service": "ID Document Scanner API
 - **Tesseract is not perfect.** Some characters in the MRZ can be misread, especially `0`/`O`, `1`/`I`, and `<`/`K`. The correction pipeline handles the most common mistakes, but very noisy images may still produce errors.
 - **Watermarks and holograms** can interfere with OCR, particularly on passports where a large watermark overlaps the MRZ area.
 - **This is a demo application** — not intended for production identity verification. Real-world systems use specialized hardware (infrared/UV scanning) and certified SDKs.
+
+## License
+
+Released under the [MIT License](LICENSE).
